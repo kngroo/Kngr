@@ -1,3 +1,4 @@
+console.log('NODE_ENV: ', process.env.NODE);
 if (process.env.NODE !== 'production') {
   var webpack = require('webpack');
   var WebpackDevServer = require('webpack-dev-server');
