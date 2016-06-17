@@ -6,6 +6,10 @@
   z-index: 99;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+
+  .container {
+    width: 100%;
+  }
 }
 
 .navbar-list {
@@ -38,4 +42,13 @@
   z-index: 99;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+.has-docked-nav .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  .container {
+    width: 80%;
+  }
 }

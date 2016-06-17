@@ -1,12 +1,21 @@
-.doc-section {
+.projects {
   border-top: 1px solid #eee;
   padding: 4rem 0;
   margin-bottom: 0;
+
+  .projects-list {
+    list-style: none;
+    .project-item {
+      position: relative;
+    }
+  }
 }
 
-.doc-header {
+.project-link {
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 1.4rem;
   letter-spacing: .2rem;
   font-weight: 600;
+  color: #222;
 }
