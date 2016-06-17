@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint src",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-    "start": "node server.js",
+    "start": "node app.js",
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

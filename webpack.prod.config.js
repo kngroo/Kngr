@@ -12,6 +12,7 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       compress: {
@@ -33,7 +34,7 @@ module.exports = {
     {
       test: /\.scss$/,
       loaders: ['style', 'css', 'sass'],
-      include: path.join(__dirname, 'styles')
+      include: path.join(__dirname, 'src/styles')
     }]
   }
 };
