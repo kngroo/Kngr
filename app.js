@@ -2,18 +2,23 @@ const Server = require('./server.heroku.js')
 const port = (process.env.PORT || 8080)
 const app = Server.app()
 
-/*if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   const webpack = require('webpack')
-  const webpackDevMiddleware = require('webpack-dev-middleware')
-  const webpackHotMiddleware = require('webpack-hot-middleware')
-  const config = require('./webpack.dev.config.js')
-  const compiler = webpack(config)
+  const WebpackDevServer = require('webpack-dev-server');
+  const config = require('./webpack.config.js')
 
-  app.use(webpackHotMiddleware(compiler))
-  app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.staticPath
-  }))
-}*/
+  new WebpackDevServer(webpack(config), {
+    publicPath: config.output.publicPath,
+    hot: true,
+    historyApiFallback: true
+  }).listen(port, 'localhost', function(err, res) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log('Listening at http://localhost:', port)
+  })
+} else {
+  app.listen(port)
+  console.log('Listening at http://localhost:', port)
+}
 
-app.listen(port)
-console.log('Listening at http://localhost:', port)
