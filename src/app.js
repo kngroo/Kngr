@@ -4,6 +4,7 @@ import Navbar from './navbar';
 
 require('./styles/normalize.scss');
 require('./styles/skeleton.scss');
+require('./styles/app.scss');
 
 export default class App extends Component {
   constructor(props) {
