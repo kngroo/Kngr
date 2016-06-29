@@ -1,0 +1,13 @@
+#vr-player {
+  position: relative;
+  width: 100%;
+}
+
+.vr-player {
+  margin-top: 1em;
+
+  #video {
+    width: 100%;
+    display: none;
+  }
+}

@@ -8,6 +8,7 @@ import Gfycat from './gfycat';
 import Projects from './projects';
 import Project from './projects';
 import Home from './home';
+import VrPlayer from './vrPlayer';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -17,7 +18,8 @@ ReactDOM.render((
       <IndexRoute component={Home} />
       <Route path='about' component={About} />
       <Route path='projects' component={Projects} />
-      <Route path='projects/:id' component={Gfycat} />
+      <Route path='projects/0' component={Gfycat} />
+      <Route path='projects/1' component={VrPlayer} />
       <Route path='contact' component={Contact} />
     </Route>
   </Router>

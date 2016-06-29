@@ -40,16 +40,18 @@ export default class Projects extends Component {
   }
 
   componentDidMount() {
-    var projects = [];
-    var project = {
-      id: 0,
-      title: 'Gfycat Top 20',
-      description: 'Angular app for viewing trending gifs on Gfycat'
-    };
-    for (let i = 0; i < 20; i++) {
-      project.id = i;
-      projects.push(project);
-    }
+    var projects = [
+      {
+        id: 0,
+        title: 'Gfycat Top 20',
+        description: 'Angular app for viewing trending gifs on Gfycat'
+      },
+      {
+        id: 1,
+        title: '360 Video Player',
+        description: 'Video player made with WebGl for viewing 360 video on the web'
+      }
+    ];
     this.setState({
       projects: projects
     });
